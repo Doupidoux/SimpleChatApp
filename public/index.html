@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleChatApp - Messagerie Sociale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Écran de connexion -->
+        <div id="login-screen">
+            <h1>SimpleChatApp</h1>
+            <input type="text" id="username-input" placeholder="Entrez votre nom">
+            <button id="join-btn">Rejoindre</button>
+        </div>
+
+        <!-- Écran principal -->
+        <div id="main-screen" style="display:none;">
+            <div class="sidebar">
+                <h2>Utilisateurs en ligne</h2>
+                <ul id="users-list"></ul>
+                <h2>Groupes</h2>
+                <ul id="groups-list"></ul>
+                <button id="create-group-btn">Créer un groupe</button>
+            </div>
+            
+            <div class="chat-area">
+                <div id="chat-header"></div>
+                <div id="messages"></div>
+                <div class="input-area">
+                    <input type="text" id="message-input" placeholder="Votre message...">
+                    <button id="send-btn">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
